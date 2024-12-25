@@ -28,17 +28,17 @@ export default function Home() {
   };
 
   return (
-    <div className="grid grid-cols-6 p-4">
-      <div className="hidden md:block">
+    <div className="flex gap-2 mt-3">
+      <div className="hidden md:block min-w-[250px] mr-20">
         <GenreList
           genreId={(genreId) => {
-            getGameListByGenreID(genreId);
+            getGameListByGenreID(genreId)
           }}
           selectedGenreName={(name) => setSelectedGenreName(name)}
         />
       </div>
 
-      <div className="col-span-6 md:col-span-5 overflow-y-auto">
+      <div className="m-5">
         {allGamesList?.length > 0 && gameListByGenres?.length > 0 ? (
           <div>
             <Banner gameBanner={allGamesList[0]} />

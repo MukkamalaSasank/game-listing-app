@@ -9,12 +9,12 @@ export default function TrendingGames({ gameList }) {
           (item, index) =>
             
             index < 4 && (
-              <div className="h-[450px] bg-[#76a8f75e] rounded-lg group hover:scale-110 transition-all duration-300 ease-in-out cursor-pointer" >
+              <div key={item.id} className="h-[450px] bg-gray-300 dark:bg-gray-800 rounded-lg group hover:scale-110 transition-all duration-300 ease-in-out cursor-pointer" >
                 <img
                   src={item.background_image}
                   className="h-[350px] rounded-lg object-cover"
                 />
-                <h2 className="dark:text-white text-[20px] font-bold p-2">
+                <h2 className="dark:text-white text-2xl font-bold p-5">
                   {item.name}
                 </h2>
               </div>
